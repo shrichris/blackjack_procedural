@@ -28,19 +28,19 @@ def calculate_total(cards)
   return total
 end
 
-def display_cards(player, cards)
-  puts "#{player}'s cards are:"
+def display_cards(person, cards)
+  puts "#{person}'s cards are:"
   cards.each do |card|
     puts "#{card[1]} of #{card[0]}" 
   end
 end
 
-def win_or_bust?(player, total)
+def win_or_bust?(person, total)
   if total == 21 
-    puts "Blackjack! #{player} wins!"
+    puts "Blackjack! #{person} wins!"
     exit
   elsif total > 21
-    puts "#{player} busts"
+    puts "#{person} busts"
     exit
   end
 end
@@ -51,7 +51,7 @@ def determine_winner(player_cards, player_total, dealer_cards, dealer_total)
   display_cards("Dealer", dealer_cards)
   if player_total < dealer_total
     puts "Player Wins!"
-  elsif player_total > deal_a_card
+  elsif player_total > dealer_total
     puts "Dealer Wins!"
   else 
     puts "Tie!"
@@ -119,6 +119,3 @@ end
 determine_winner(player_cards, dealer_cards)
 
 exit
-
-
-
