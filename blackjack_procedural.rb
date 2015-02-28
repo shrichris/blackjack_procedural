@@ -1,6 +1,6 @@
 # Blackjack Assignment
 # Author: S Srinivasan
-# Date: 28th February 2015
+# Date: 28th February 2015 
 
 def deal_a_card!(deck)
 	dealt_card = deck.pop
